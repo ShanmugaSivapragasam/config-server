@@ -1,5 +1,5 @@
 mvn clean install
-project=sample
+project=shan-demos3
 repository=configserver
 docker build . --tag gcr.io/$project/$repository
 docker push gcr.io/$project/$repository

@@ -32,7 +32,7 @@ public class ConfigServerApplication {
 	public Firestore firestore(){
 
 		Firestore firestore = null;
-		log.info(" initializing firestore with key " + jsonPath);
+		log.info(" config server: initializing firestore with key " + jsonPath);
 		GoogleCredentials credentials = null;
 		try {
 			credentials = GoogleCredentials.fromStream(new FileInputStream(jsonPath))
@@ -45,7 +45,7 @@ public class ConfigServerApplication {
 		}
 
 //		sample to show that we are in right place
-		firestore.listCollections().forEach(doc -> log.info( "  reterieved firestore collection  " + doc.getId()));
+		firestore.listCollections().forEach(doc -> log.info( "  config server: reterieved firestore collection  " + doc.getId()));
 
 		return firestore;
 
